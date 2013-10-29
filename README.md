@@ -42,9 +42,11 @@ The simplest example for mounting a share;
 
     smbfs_mount '/mnt' do
       cifs_path '//san01.example.org/myshare$/Some/Path'
-      username 'MyUser',
-      password 'MyPass',
-      options {'rw' => nil}
+      username 'MyUser'
+      password 'MyPass'
+      options(
+        'rw' => nil
+      )
     end
 
 Attribute Driven Recipe
